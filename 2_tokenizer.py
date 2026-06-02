@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
     print(f"\n  Vocab size: {tokenizer.vocab_size:,}")
 
-    flag = False
+    flag = True
     while(flag):
         print()
         print()
@@ -160,7 +160,7 @@ if __name__ == "__main__":
         print()
         print(f"  Original: '{test_text}'")
         print(f"  Encoded:  {encoded}")
-        print(f"  Pieces:  {[tokenizer.decode([t]) for t in rare]}")
+        print(f"  Pieces:  {[tokenizer.decode([t]) for t in encoded]}")
         print(f"  Decoded:  '{decoded}'")
         print(f"  Match:    {test_text == decoded}")
         print()
