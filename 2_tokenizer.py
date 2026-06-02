@@ -144,3 +144,24 @@ if __name__ == "__main__":
     print(f"  Decoded: '{tokenizer.decode(emoji)}'")
 
     print(f"\n  Vocab size: {tokenizer.vocab_size:,}")
+
+    flag = False
+    while(flag):
+        print()
+        print()
+        print(f"-----------------------------------New Test for Tokenization-----------------------------------")
+        print()
+        flag = input("Enter the word/statement for tokenization: ")
+        print()
+        test_text = flag
+        encoded = tokenizer.encode(test_text)
+        decoded = tokenizer.decode(encoded)
+        print(f"-----------------------------------Test Start--------------------------------------------------")
+        print()
+        print(f"  Original: '{test_text}'")
+        print(f"  Encoded:  {encoded}")
+        print(f"  Pieces:  {[tokenizer.decode([t]) for t in rare]}")
+        print(f"  Decoded:  '{decoded}'")
+        print(f"  Match:    {test_text == decoded}")
+        print()
+        print(f"-----------------------------------Test End----------------------------------------------------")
